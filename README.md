@@ -4,5 +4,5 @@
  - Note that player 1 will initialize the guessing word
  - Player 2 will be the one guessing
 2. **Main Menu**
-3. **Timer **
+3. **Timer Class**
 4. **Error Handling**
