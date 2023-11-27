@@ -1,8 +1,8 @@
 package GameMode;
 
-public class SinglePlayer extends GameMode {
-    public SinglePlayer() {
-        _gameModeName = "Single Player";
+public class Custom extends GameMode {
+    public Custom() {
+        _gameModeName = "Custom";
     }
 
     @Override

@@ -1,8 +1,8 @@
 package GameMode;
 
-public class SinglePlayer extends GameMode {
-    public SinglePlayer() {
-        _gameModeName = "Single Player";
+public class TimeAttack extends GameMode {
+    public TimeAttack() {
+        _gameModeName = "Time Attack";
     }
 
     @Override
