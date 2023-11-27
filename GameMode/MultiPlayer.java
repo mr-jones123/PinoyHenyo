@@ -2,11 +2,11 @@ package GameMode;
 
 public class MultiPlayer extends GameMode {
     public MultiPlayer() {
-        gameMode = "Multi Player";
+        _gameMode = "Multi Player";
     }
 
     @Override
     public void play() {
-        System.out.println("Playing " + gameMode);
+        System.out.println("Playing " + _gameMode);
     }
 }

@@ -2,11 +2,11 @@ package GameMode;
 
 public class SinglePlayer extends GameMode {
     public SinglePlayer() {
-        gameMode = "Single Player";
+        _gameMode = "Single Player";
     }
 
     @Override
     public void play() {
-        System.out.println("Playing " + gameMode);
+        System.out.println("Playing " + _gameMode);
     }
 }

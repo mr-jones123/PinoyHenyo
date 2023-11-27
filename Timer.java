@@ -1,35 +1,35 @@
 public class Timer {
-    private long startTime = 0;
-    private long endTime = 0;
-    private boolean running = false;
+    private long _startTime = 0;
+    private long _endTime = 0;
+    private boolean _isRunning = false;
 
     public Timer() {
-        this.running = false;
+        _isRunning = false;
     }
 
     public void start() {
-        this.startTime = System.currentTimeMillis();
-        this.running = true;
+        _startTime = System.currentTimeMillis();
+        _isRunning = true;
     }
 
     public void stop() {
-        this.endTime = System.currentTimeMillis();
-        this.running = false;
+        _endTime = System.currentTimeMillis();
+        _isRunning = false;
     }
 
-    public long getStartTime() {
-        return this.startTime;
+    public long get_startTime() {
+        return _startTime;
     }
 
-    public long getEndTime() {
-        return this.endTime;
+    public long get_endTime() {
+        return _endTime;
     }
 
     public long getElapsedTime() {
-        return this.endTime - this.startTime;
+        return _endTime - _startTime;
     }
 
-    public boolean isRunning() {
-        return this.running;
+    public boolean is_isRunning() {
+        return _isRunning;
     }
 }
