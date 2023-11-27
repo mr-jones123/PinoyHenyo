@@ -16,7 +16,7 @@ public class PinoyHenyo {
     private void promptMode() {
         Integer choice = 0;
         System.out.println("Choose game mode: ");
-        gameModes.forEach((gameMode) -> {
+        gameModes.forEach((gameMode) -> { 
             System.out.println(gameMode);
         });
         System.out.print("Enter choice: ");
@@ -25,12 +25,12 @@ public class PinoyHenyo {
             switch (choice) {
                 case 1: {
                     gameMode.setGameMode(new SinglePlayer());
-                    break;
+                    break; 
                 }
                 case 2: {
                     gameMode.setGameMode(new MultiPlayer());
                     break;
-                }
+                }   
                 default: {
                     System.out.println("Invalid choice!");
                     break;
@@ -38,8 +38,6 @@ public class PinoyHenyo {
             }
         }
     }
-
-
 
     public void start() {
         promptMode();

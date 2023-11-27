@@ -1,4 +1,6 @@
 package Guess.People;
+import java.util.Arrays;
+
 import Guess.Guess;
 public class CelebrityPeople extends Guess {        
     CelebrityPeople() {
@@ -26,4 +28,11 @@ public class CelebrityPeople extends Guess {
             "The Weeknd"
         });
     }
+  void Guess( String []CelebrityPeople){
+    _guessWords.addAll(Arrays.asList(CelebrityPeople));
+  }
+  @Override
+  protected void displaySet() {
+      super.displaySet();
+  }
 }

@@ -2,7 +2,8 @@ package Guess;
 
 import java.util.HashSet;
 import java.util.Arrays;
-
+// NOTE: Tier 1: People Location Things
+// Tier 2: The categories below it, e.g celebrities in people
 public abstract class Guess {
     protected HashSet<String> _guessWords = new HashSet<String>();
 
@@ -19,4 +20,15 @@ public abstract class Guess {
             System.out.println(guessWord);
         }
     }
+    protected String getTier1(String guesstier1){
+        return guesstier1;
+    }
+    protected String getTier2(String guesstier2){
+        return guesstier2;
+    }
+    //TTHE FINAL GUESS
+    protected String getTier3(String guesstier3){
+        return guesstier3;
+    }
+    
 }
