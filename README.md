@@ -6,3 +6,4 @@
 2. **Main Menu**
 3. **Timer Class**
 4. **Error Handling**
+Test Git commands
