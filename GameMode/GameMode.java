@@ -2,7 +2,7 @@ package GameMode;
 
 public abstract class GameMode {
     String _gameModeName = "";
-    GameMode _gm = new SinglePlayer();
+    GameMode _gm = null;
 
     public abstract void play();
 
