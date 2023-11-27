@@ -5,8 +5,6 @@ import Guess.Guess;
 public class WorldLeaderPeople extends Guess {
     WorldLeaderPeople() {
         super(
-                "People",
-                "World Leader",
                 new String[] {
                         "Angela Merkel",
                         "Barack Obama",

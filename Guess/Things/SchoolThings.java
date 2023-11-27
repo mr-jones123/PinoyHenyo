@@ -5,8 +5,6 @@ import Guess.Guess;
 public class SchoolThings extends Guess {
     public SchoolThings() {
         super(
-                "Things",
-                "School",
                 new String[] {
                         "Textbook",
                         "Notebook",

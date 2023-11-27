@@ -3,10 +3,8 @@ package Guess.People;
 import Guess.Guess;
 
 public class CelebrityPeople extends Guess {
-  CelebrityPeople() {
+  public CelebrityPeople() {
     super(
-        "People",
-        "Celebrity",
         new String[] {
             "Tom Hanks",
             "Jennifer Lawrence",

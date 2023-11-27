@@ -5,8 +5,6 @@ import Guess.Guess;
 public class IntlLocation extends Guess {
     public IntlLocation() {
         super(
-                "Locations",
-                "International",
                 new String[] {
                         "Paris",
                         "Tokyo",

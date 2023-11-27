@@ -1,60 +1,43 @@
 package Players;
 
+import java.io.Console;
 import java.util.Scanner;
+
 import Guess.Guess;
-import Guess.People.CelebrityPeople;
+import Guess.Location.location;
+import Guess.People.people;
 
 // The one who sets the guessing words
 public class player1 extends Guess {
-    public static String guessTier1, guessTier2, guessTier3;
-    CelebrityPeople celeb = new CelebrityPeople();
-
-    protected player1(String[] guessWords) {
+    Console console = System.console();
+    people People = new people();
+    location Location = new location();
+    public player1(String[] guessWords) {
         super(guessWords);
     }
 
     Scanner scan = new Scanner(System.in);
-    private String categoryChoice, subcategoryChoice, finalChoice;
+    private char[] guessWord1;
 
-    // initializing the category
-    public void initializeCategory() {
-        System.out.println("Pick Category: ");
-        System.out.println("People  Location  Things");
-        System.out.print("");
-        categoryChoice = scan.nextLine(); // Must restore
+    //initalizing the category
+    public void initializGuessingWords() {
+        System.out.println("SELECT CATEGORY:");
+        System.out.println("PEOPLE |  LOCATION  | THINGS");
+        guessWord1 = console.readPassword("Enter First Mystery Word: ");
+        String guessWord1String = new String(guessWord1);
+        if (guessWord1String.equalsIgnoreCase("People")) {
+            System.out.println("First Word Initalized!");
+            People.initializeforPeople(guessWord1String);
+   }
+    //     if (guessWord1String.equalsIgnoreCase("Location")){
+    //         System.out.println("First Word Initalized!");
+    //         Location.locationOperations();
+    //     }
+    //     if (guessWord1String.equalsIgnoreCase("Things")){
+    //         System.out.println("First Person Initialized!");
+            
+    //     }
+    // }   
 
-        switch (categoryChoice.toLowerCase()) {
-            case "people":
-                guessTier1 = categoryChoice;
-                setSubcategoryAndFinalChoice("Celebrities  Athlete  World Leaders", "person");
-                break;
 
-            case "location":
-                getTier1(categoryChoice);
-                setSubcategoryAndFinalChoice("Local  International", "location");
-                break;
-
-            case "things":
-                getTier1(categoryChoice);
-                setSubcategoryAndFinalChoice("Home   School", "thing");
-                break;
-
-            default:
-                System.out.println("Invalid category");
-                break;
-        }
-    }
-
-    private void setSubcategoryAndFinalChoice(String subcategories, String type) {
-        System.out.println("Pick another category: ");
-        System.out.println(subcategories);
-        System.out.print("");
-        subcategoryChoice = scan.nextLine();
-        guessTier2 = subcategoryChoice;
-        celeb.displaySet();
-        System.out.println("Finally, pick a " + type + ": ");
-        System.out.print("");
-        finalChoice = scan.nextLine();
-        guessTier3 = finalChoice;
-    }
-}
+    }}

@@ -5,8 +5,6 @@ import Guess.Guess;
 public class AthletePeople extends Guess {
     AthletePeople() {
         super(
-                "People",
-                "Athlete",
                 new String[] {
                         "Usain Bolt",
                         "Serena Williams",

@@ -1,8 +1,10 @@
 import Difficulty.Difficulty;
 import GameMode.GameModeFactory;
+import GameMode.MultiPlayer;
 import IO.IOSingleton;
 
 public class PinoyHenyo {
+    private static final MultiPlayer multiplayer = new MultiPlayer();
     private static final Members members = new Members();
     private static final IOSingleton io = IOSingleton.getInstance();
     private static final GameModeFactory gameModeFactory = new GameModeFactory();
@@ -18,13 +20,19 @@ public class PinoyHenyo {
 
     public void exec() {
         Integer mode = promptMode();
-        difficulty.promptDifficultyLevel();
-        Integer difficultyLevel = difficulty.getDifficultyLevel();
-        // game.init(gameModeFactory.getGameMode(mode), difficultyLevel);
-        members.printMembers();
+        switch (mode) {
+            case 2:
+                difficulty.promptDifficultyLevel();
+                multiplayer.play();
+                break;
+        
+            default:
+                break;
+        }
+        // difficulty.promptDifficultyLevel();
+        // Integer difficultyLevel = difficulty.getDifficultyLevel();
+        // // game.init(gameModeFactory.getGameMode(mode), difficultyLevel);
+        // members.printMembers();
     }
 
-    public PinoyHenyo() {
-
-    }
 }
