@@ -35,4 +35,8 @@ public class GameTimer {
     public int getSecondsRemaining() {
         return this.secondsRemaining;
     }
+
+    public void stop() {
+        timer.cancel();
+    }
 }

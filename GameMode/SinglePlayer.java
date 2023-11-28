@@ -19,8 +19,10 @@ public class SinglePlayer extends GameMode {
         String input = "";
         do {
             input = _ioSingleton.getScanner().nextLine();
-            if (input.equals(guessWord)) {
+            if (input.equalsIgnoreCase(guessWord) ) {
                 System.out.println("Correct!");
+                gameTimer.stop();
+                return;
             } else {
                 System.out.println("Incorrect! Try again.");
             }

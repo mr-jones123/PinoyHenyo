@@ -54,6 +54,18 @@ public class PinoyHenyo {
         } while (true);
     }
 
+    private static Integer promptTryAgain() {
+        do {
+            System.out.print("Try again? (1) Yes (2) No: ");
+            Integer choice = io.getScanner().nextInt();
+            if (choice < 1 || choice > 2) {
+                System.out.println("Invalid choice!");
+                continue;
+            }
+            return choice;
+        } while (true);
+    }
+
     public static void exec() {
         aux.printIntro();
         Integer tryAgain = 0;
@@ -67,7 +79,8 @@ public class PinoyHenyo {
             System.out.println("-----------------------");
             game = new Game(gameMode, wordBank);
             game.play(difficultyLevel);
-
+            tryAgain = promptTryAgain();
         } while (tryAgain == 1);
+        aux.printOutro();
     }
 }

@@ -13,13 +13,15 @@ public class TimeAttack extends GameMode {
        System.out.println("Playing " + _gameModeName + "...");
        System.out.println("Category: " + wb.getCategory() + " - " + wb.getSubcategory());
        System.out.println("Guess the word: ");
+        _ioSingleton.getScanner().nextLine();
        String guessWord = wb.getRandomWord();
        String input;
        int score = 0;
        do {
            input = _ioSingleton.getScanner().nextLine();
-           if (input.equals(guessWord)) {
+           if (input.equalsIgnoreCase(guessWord)) {
                System.out.println("Correct! Score: " + (++score));
+               System.out.println("Keep going!!!");
                guessWord = wb.getRandomWord();
            } else {
                System.out.println("Incorrect!");

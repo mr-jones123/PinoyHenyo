@@ -49,6 +49,7 @@ public class Auxillary {
             "                                                                                         ";
 
     public void printOutro() {
+        System.out.println("-----------------------");
         System.out.println(outroAscii);
         System.out.println("-----------------------");
         System.out.println("Thank you for playing Pinoy Henyo!");
