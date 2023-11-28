@@ -16,7 +16,7 @@ public class Difficulty {
         timeLimits.put("Hard", 2 * 60);
     }
 
-    public int getTimeLimit(int difficultyLevel) {
+    public Integer getTimeLimit(int difficultyLevel) {
         String difficulty = difficultyLevels.get(difficultyLevel);
         return timeLimits.get(difficulty);
     }

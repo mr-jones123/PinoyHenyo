@@ -2,11 +2,13 @@ package Guess;
 
 import java.util.HashSet;
 import java.util.Arrays;
+import java.util.Random;
+
 // NOTE: Tier 1: People Location Things
 // Tier 2: The categories below it, e.g celebrities in people
 public abstract class WordBank {
     protected HashSet<String> _guessWords = new HashSet<String>();
-    protected String _category = "" , _subcategory = "";
+    protected String _category = "", _subcategory = "";
 
     protected boolean exists(String guessWord) {
         return _guessWords.contains(guessWord);
@@ -32,8 +34,16 @@ public abstract class WordBank {
         return _subcategory;
     }
 
-    public void promptCategory() {
-        System.out.println("Pick Category: ");
-        
+    public String getRandomWord() {
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(_guessWords.size());
+        int currentIndex = 0;
+        for (String guessWord : _guessWords) {
+            if (currentIndex == randomIndex) {
+                return guessWord;
+            }
+            ++currentIndex;
+        }
+        return null;
     }
 }

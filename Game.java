@@ -3,21 +3,21 @@ import Difficulty.Difficulty;
 import Guess.WordBank;
 
 public class Game {
-    private GameMode gameMode = null;
-    private Difficulty difficulty = null;
-    private WordBank wb = null;
-    private GameTimer gameTimer = null;
+    private GameMode _gameMode = null;
+    private Difficulty _difficulty = null;
+    private WordBank _wb = null;
+    private GameTimer _gameTimer = null;
 
-    public Game(GameMode gameMode, Difficulty difficulty, WordBank guess) {
-        this.gameMode = gameMode;
-        this.difficulty = difficulty;
-        this.wb = guess;
-        this.gameTimer = new GameTimer();
+    public Game(GameMode gameMode, WordBank guess) {
+        _gameMode = gameMode;
+        _wb = guess;
+        _difficulty = new Difficulty();
+        _gameTimer = new GameTimer();
     }
 
-    public void play() {
-        // int timeLimit = difficulty.getTimeLimit();
-        // gameTimer.start(timeLimit);
-        gameMode.play();
+    public void play(Integer difficultyLevel) {
+        int timeLimit = _difficulty.getTimeLimit(difficultyLevel);
+        _gameTimer.start(timeLimit);
+        _gameMode.play(_wb);
     }
 }

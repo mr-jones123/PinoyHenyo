@@ -21,7 +21,7 @@ public class IOSingleton {
                 }
             }
         }
-        return instance;
+        return result;
     }
     
     public Scanner getScanner() {

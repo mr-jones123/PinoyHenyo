@@ -5,11 +5,11 @@ import Guess.Location.*;
 import Guess.People.*;
 import Guess.Things.*;
 
-public class WordBankMap {
+public class WordBankFactory {
     
     private final static TreeMap<Integer, WordBank> wordBankMap = new TreeMap<>();
     
-    public WordBankMap() {
+    public WordBankFactory() {
         wordBankMap.put(1, new IntlLocation());
         wordBankMap.put(2, new LocalLocation());
         wordBankMap.put(3, new AthletePeople());

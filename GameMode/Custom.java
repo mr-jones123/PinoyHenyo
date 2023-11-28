@@ -1,12 +1,11 @@
 package GameMode;
-
+import Guess.WordBank;
 public class Custom extends GameMode {
     public Custom() {
         _gameModeName = "Custom";
     }
 
     @Override
-    public void play() {
-        System.out.println("Playing " + _gameModeName);
+    public void play(WordBank wb) {
     }
 }
