@@ -1,4 +1,5 @@
 import GameMode.GameMode;
+import GameTimer.GameTimer;
 import Difficulty.Difficulty;
 import Guess.WordBank;
 
@@ -18,6 +19,6 @@ public class Game {
     public void play(Integer difficultyLevel) {
         int timeLimit = _difficulty.getTimeLimit(difficultyLevel);
         _gameTimer.start(timeLimit);
-        _gameMode.play(_wb);
+        _gameMode.play(_wb, _gameTimer);
     }
 }

@@ -1,6 +1,7 @@
 package GameMode;
 
 import Guess.WordBank;
+import GameTimer.GameTimer;
 
 public class SinglePlayer extends GameMode {
     public SinglePlayer() {
@@ -8,7 +9,21 @@ public class SinglePlayer extends GameMode {
     }
 
     @Override
-    public void play(WordBank wb) {
-        
+    public void play(WordBank wb, GameTimer gameTimer) {
+        System.out.print("\033[H\033[2J");
+        System.out.println("Playing " + _gameModeName + "...");
+        System.out.println("Category: " + wb.getCategory() + " - " + wb.getSubcategory());
+        System.out.print("Guess the word: ");
+        _ioSingleton.getScanner().nextLine();
+        String guessWord = wb.getRandomWord();
+        String input = "";
+        do {
+            input = _ioSingleton.getScanner().nextLine();
+            if (input.equals(guessWord)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("Incorrect! Try again.");
+            }
+        } while (!input.equals(guessWord));
     }
 }

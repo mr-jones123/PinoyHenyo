@@ -6,7 +6,7 @@ import Guess.WordBankFactory;
 import IO.IOSingleton;
 
 public class PinoyHenyo {
-    private static final Members members = new Members();
+    private static final Auxillary aux = new Auxillary();
     private static final IOSingleton io = IOSingleton.getInstance();
     private static final GameModeFactory gameModeFactory = new GameModeFactory();
     private static final Difficulty difficulty = new Difficulty();
@@ -55,16 +55,19 @@ public class PinoyHenyo {
     }
 
     public static void exec() {
-        try {
+        aux.printIntro();
+        Integer tryAgain = 0;
+        do {
             Integer mode = promptMode();
             GameMode gameMode = gameModeFactory.getGameMode(mode);
+            System.out.println("-----------------------");
             Integer difficultyLevel = promptDifficulty();
+            System.out.println("-----------------------");
             promptWordBank();
+            System.out.println("-----------------------");
             game = new Game(gameMode, wordBank);
             game.play(difficultyLevel);
-            members.printMembers();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+
+        } while (tryAgain == 1);
     }
 }
