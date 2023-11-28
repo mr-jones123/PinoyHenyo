@@ -2,17 +2,23 @@ package Difficulty;
 
 import java.util.HashMap;
 
-import IO.IOSingleton;
-
 public class Difficulty {
     private final static HashMap<Integer, String> difficultyLevels = new HashMap<>();
-    private static final IOSingleton io = IOSingleton.getInstance();
-    private Integer difficultyLevel = 1;
+    private final static HashMap<String, Integer> timeLimits = new HashMap<>();
 
     public Difficulty() {
         difficultyLevels.put(1, "Easy");
         difficultyLevels.put(2, "Medium");
         difficultyLevels.put(3, "Hard");
+
+        timeLimits.put("Easy", 5 * 60);
+        timeLimits.put("Medium", 3 * 60);
+        timeLimits.put("Hard", 2 * 60);
+    }
+
+    public int getTimeLimit(int difficultyLevel) {
+        String difficulty = difficultyLevels.get(difficultyLevel);
+        return timeLimits.get(difficulty);
     }
 
     public void displayMap() {
@@ -21,18 +27,7 @@ public class Difficulty {
         }
     }
 
-    public void promptDifficultyLevel() {
-        displayMap();
-        System.out.print("Enter difficulty level: ");
-        Integer choice = io.getScanner().nextInt();
-        setDifficultyLevel(choice);
-    }
-
-    public Integer getDifficultyLevel() {
-        return difficultyLevel;
-    }
-
-    public void setDifficultyLevel(Integer difficultyLevel) {
-        this.difficultyLevel = difficultyLevel;
+    public HashMap<Integer, String> getDifficultyLevels() {
+        return difficultyLevels;
     }
 }

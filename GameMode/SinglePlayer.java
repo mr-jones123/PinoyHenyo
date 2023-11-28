@@ -7,6 +7,6 @@ public class SinglePlayer extends GameMode {
 
     @Override
     public void play() {
-        System.out.println("Playing " + _gameModeName);
+        
     }
 }

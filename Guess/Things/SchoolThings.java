@@ -1,8 +1,8 @@
 package Guess.Things;
 
-import Guess.Guess;
+import Guess.WordBank;
 
-public class SchoolThings extends Guess {
+public class SchoolThings extends WordBank {
     public SchoolThings() {
         super(
                 "Things",

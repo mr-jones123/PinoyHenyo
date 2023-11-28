@@ -1,9 +1,9 @@
 package Guess.People;
 
-import Guess.Guess;
+import Guess.WordBank;
 
-public class CelebrityPeople extends Guess {
-  CelebrityPeople() {
+public class CelebrityPeople extends WordBank{
+  public CelebrityPeople() {
     super(
         "People",
         "Celebrity",

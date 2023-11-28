@@ -1,8 +1,8 @@
 package Guess.Location;
 
-import Guess.Guess;
+import Guess.WordBank;
 
-public class IntlLocation extends Guess {
+public class IntlLocation extends WordBank {
     public IntlLocation() {
         super(
                 "Locations",

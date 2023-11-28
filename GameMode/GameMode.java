@@ -4,9 +4,9 @@ public abstract class GameMode {
     String _gameModeName = "";
     GameMode _gm = null;
 
-    public abstract void play();
 
-    GameMode() {
+    // Add a constructor that accepts a Difficulty object
+    public GameMode() {
         _gameModeName = "";
     }
 
@@ -17,4 +17,6 @@ public abstract class GameMode {
     public void setGameMode(GameMode gameMode) {
         _gm = gameMode;
     }
+
+    public abstract void play();
 }

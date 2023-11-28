@@ -7,6 +7,7 @@ public class TimeAttack extends GameMode {
 
     @Override
     public void play() {
+        System.out.println("Time Attack Mode");
         
     }
 }

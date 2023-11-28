@@ -1,9 +1,9 @@
 package Guess.Location;
 
-import Guess.Guess;
+import Guess.WordBank;
 
-public class LocalLocation extends Guess {
-    LocalLocation() {
+public class LocalLocation extends WordBank {
+    public LocalLocation() {
         super(
                 "Locations",
                 "Local",
