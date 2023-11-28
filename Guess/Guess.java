@@ -6,29 +6,29 @@ import java.util.Arrays;
 // Tier 2: The categories below it, e.g celebrities in people
 public abstract class Guess {
     protected HashSet<String> _guessWords = new HashSet<String>();
+    protected String _category = "" , _subcategory = "";
 
     protected boolean exists(String guessWord) {
         return _guessWords.contains(guessWord);
     }
 
-    protected Guess(String[] guessWords) {
+    protected Guess(String category, String subcategory, String[] guessWords) {
+        _category = category;
+        _subcategory = subcategory;
         _guessWords.addAll(Arrays.asList(guessWords));
     }
 
-    protected void displaySet() {
+    public void displaySet() {
         for (String guessWord : _guessWords) {
             System.out.println(guessWord);
         }
     }
-    protected String getTier1(String guesstier1){
-        return guesstier1;
+
+    public String getCategory() {
+        return _category;
     }
-    protected String getTier2(String guesstier2){
-        return guesstier2;
+
+    public String getSubcategory() {
+        return _subcategory;
     }
-    //TTHE FINAL GUESS
-    protected String getTier3(String guesstier3){
-        return guesstier3;
-    }
-    
 }

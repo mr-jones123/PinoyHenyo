@@ -4,7 +4,6 @@ public class Timer {
     private boolean _isRunning = false;
 
     public Timer() {
-        _isRunning = false;
     }
 
     public void start() {

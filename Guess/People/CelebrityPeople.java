@@ -1,10 +1,13 @@
 package Guess.People;
-import java.util.Arrays;
 
 import Guess.Guess;
-public class CelebrityPeople extends Guess {        
-    CelebrityPeople() {
-        super(new String[] {
+
+public class CelebrityPeople extends Guess {
+  CelebrityPeople() {
+    super(
+        "People",
+        "Celebrity",
+        new String[] {
             "Tom Hanks",
             "Jennifer Lawrence",
             "Leonardo DiCaprio",
@@ -27,12 +30,5 @@ public class CelebrityPeople extends Guess {
             "Drake",
             "The Weeknd"
         });
-    }
-  void Guess( String []CelebrityPeople){
-    _guessWords.addAll(Arrays.asList(CelebrityPeople));
-  }
-  @Override
-  protected void displaySet() {
-      super.displaySet();
   }
 }
