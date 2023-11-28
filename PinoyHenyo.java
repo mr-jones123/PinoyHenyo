@@ -10,7 +10,7 @@ public class PinoyHenyo {
     private static final Difficulty difficulty = new Difficulty();
 
     private Integer promptMode() {
-        GameModeFactory.displayModes();
+        gameModeFactory.displayModes();
         System.out.print("Enter game mode: ");
         Integer choice = io.getScanner().nextInt();
         return choice;
@@ -20,7 +20,7 @@ public class PinoyHenyo {
         Integer mode = promptMode();
         difficulty.promptDifficultyLevel();
         Integer difficultyLevel = difficulty.getDifficultyLevel();
-        game.init(gameModeFactory.getGameMode(mode), difficultyLevel);
+        // game.init(gameModeFactory.getGameMode(mode), difficultyLevel);
         members.printMembers();
     }
 

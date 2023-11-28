@@ -8,5 +8,6 @@ public class MultiPlayer extends GameMode {
     @Override
     public void play() {
         System.out.println("Playing " + _gameModeName);
+        
     }
 }

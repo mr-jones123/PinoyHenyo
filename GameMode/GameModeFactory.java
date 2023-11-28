@@ -14,7 +14,7 @@ public class GameModeFactory {
         return _gameModes.get(choice);
     }
 
-    public static void displayModes() {
+    public void displayModes() {
         for (Integer key : _gameModes.keySet()) {
             System.out.println(key + ". " + _gameModes.get(key).getGameModeName());
         }
